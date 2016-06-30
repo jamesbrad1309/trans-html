@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en" ng-app="transApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Trans HTML CODE</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="js/app.js"></script>
+</head>
+
+<body>
+<main ng-controller="transMainController as mainController">
+    <form>
+        <textarea rows="10" cols="100" ng-model="input" onkeydown="if(event.keyCode===9){var v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+'\t'+v.substring(e);this.selectionStart=this.selectionEnd=s+1;return false;}"></textarea>
+    </form>
+
+    <textarea rows="10" cols="100" ng-bind="output"></textarea>
+</main>
+</body>
+
+</html>
