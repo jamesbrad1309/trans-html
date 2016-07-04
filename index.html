@@ -11,10 +11,15 @@
 <body>
 <main ng-controller="transMainController as mainController">
     <form>
-        <textarea rows="10" cols="100" ng-model="input" onkeydown="if(event.keyCode===9){var v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+'\t'+v.substring(e);this.selectionStart=this.selectionEnd=s+1;return false;}"></textarea>
+        <textarea rows="10" cols="100" ng-model="input"
+                  onkeydown="if(event.keyCode===9){var v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+'\t'+v.substring(e);this.selectionStart=this.selectionEnd=s+1;return false;}"></textarea>
     </form>
 
     <textarea rows="10" cols="100" ng-bind="output"></textarea>
+
+    <pre ng-bind="output">
+
+    </pre>
 </main>
 </body>
 
